@@ -26,6 +26,7 @@ public class UserController {
     public ResponseEntity<String> addUser(@RequestBody PropertyUserDto propertyUserDto) {
         PropertyUser propertyUser = userService.addUser(propertyUserDto);
         if (propertyUser != null) {
+            System.out.println();
             return new ResponseEntity<>("Registration is Successful", HttpStatus.CREATED);
         }
         return new ResponseEntity<>("Something went wrong", HttpStatus.INTERNAL_SERVER_ERROR);

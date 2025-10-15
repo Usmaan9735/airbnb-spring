@@ -25,5 +25,4 @@ import org.springframework.security.web.SecurityFilterChain;
                 .anyRequest().authenticated(); // Ensure other requests require authentication
         return http.build();
     }
-}
 
